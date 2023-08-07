@@ -46,7 +46,7 @@ func main() {
 		return
 	}
 
-	file, err := os.OpenFile("cotacao.txt", os.O_APPEND|os.O_WRONLY, 0644)
+	file, err := os.OpenFile("cotacao.txt", os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644)
 	if err != nil {
 		log.Fatal(err)
 		return
